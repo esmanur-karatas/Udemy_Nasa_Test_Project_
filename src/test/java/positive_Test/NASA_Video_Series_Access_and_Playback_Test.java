@@ -6,9 +6,9 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import page.Series_Our_Alien_Earth_Page;
-import page.Series_Page;
-import page.Tabbar_New_And_Events_Page;
+import pages.Series_Our_Alien_Earth_Page;
+import pages.Series_Page;
+import pages.Tabbar_New_And_Events_Page;
 import utilities.ConfigurationReader;
 import utilities.Driver;
 import utilities.ReusableMethod;
