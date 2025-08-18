@@ -19,6 +19,9 @@ public class Tabbar_New_And_Events_Page {
     @FindBy(xpath = "//*[@id=\"news-events-submenu\"]/li[3]/a")
     private WebElement videoSeriesButton;
 
+    @FindBy(xpath = "//*[@id=\"news-events-submenu\"]/li[6]/a")
+    private WebElement newsletterButton;
+
 
 
 
@@ -34,5 +37,8 @@ public class Tabbar_New_And_Events_Page {
         videoSeriesButton.click();
     }
 
+    public void clickNewsletterButton(){
+        newsletterButton.click();
+    }
 
 }

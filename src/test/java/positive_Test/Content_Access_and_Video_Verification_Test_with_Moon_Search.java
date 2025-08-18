@@ -27,7 +27,7 @@ public class Content_Access_and_Video_Verification_Test_with_Moon_Search {
     public void content_Access_and_Video_Verification_Test_with_Moon_Search() throws InterruptedException {
 
 //        2.	Type the word "Moon" in the search box at the top right of the home page and press Enter
-        search_page.InputSearchBox("Moon");
+        search_page.inputSearchBox("Moon");
 
 //        3.	On the page that opens, check if "Search Results for: Moon" appears on the page.
         String expectedTitle = "Search Results for: Moon";

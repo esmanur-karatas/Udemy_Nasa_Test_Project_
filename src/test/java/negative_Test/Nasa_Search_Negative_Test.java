@@ -22,10 +22,10 @@ public class Nasa_Search_Negative_Test {
     @Test
     public void Missions_Page_Access_Test() {
 //        2.	Search the search box on the homepage with nothing typed in and see if the text "Sorry"
-        search_page.InputSearchBox(" ");
+        search_page.inputSearchBox(" ");
         String expectedText = "Sorry".toLowerCase();
 
-        String actualText = search_page.VerifyErrorMessage().getText().toLowerCase();
+        String actualText = search_page.verifyErrorMessage().getText().toLowerCase();
         System.out.println(actualText);
         Assert.assertTrue(actualText.contains(expectedText),
                 "Expected to find" + expectedText + "in the text, but got: " + actualText);

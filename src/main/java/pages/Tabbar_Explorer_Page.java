@@ -22,6 +22,12 @@ public class Tabbar_Explorer_Page {
    @FindBy(id = "header-logo")
    private WebElement nasaLogo;
 
+   @FindBy(xpath = "//*[@id=\"global-navigation\"]/div/div/div[1]/div/ul/li[3]/a")
+   private WebElement humanInSpaceButton;
+
+   @FindBy(xpath = "//*[@id=\"global-navigation\"]/div/div/div[3]/div/div[3]/ul/li[2]/a")
+   private WebElement astrounutsButton;
+
 
     public void clickExplorerButton(){
         explorerButton.click();
@@ -45,5 +51,13 @@ public class Tabbar_Explorer_Page {
 
     public void clickNasaLogo(){
         nasaLogo.click();
+    }
+
+    public void clickHumanInSpaceButton(){
+        humanInSpaceButton.click();
+    }
+
+    public void clickAstrounutsButton(){
+        astrounutsButton.click();
     }
 }
