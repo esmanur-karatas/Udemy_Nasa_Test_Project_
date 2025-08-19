@@ -1,0 +1,22 @@
+2025-08-19 15:14:35 [INFO] positive_Test.Content_Access_and_Video_Verification_Test_with_Moon_Search - NASA ana sayfasına gidildi.
+2025-08-19 15:14:35 [INFO] positive_Test.Content_Access_and_Video_Verification_Test_with_Moon_Search - Arama kutusuna 'Moon' yazılıyor...
+2025-08-19 15:14:36 [DEBUG] positive_Test.Content_Access_and_Video_Verification_Test_with_Moon_Search - Arama başlığı doğrulandı: Search Results for: Moon
+2025-08-19 15:14:36 [INFO] positive_Test.Content_Access_and_Video_Verification_Test_with_Moon_Search - İlk arama sonucu doğrulandı: earth's moon
+https://science.nasa.gov/moon/
+learn more about the moon
+2025-08-19 15:14:36 [INFO] positive_Test.Content_Access_and_Video_Verification_Test_with_Moon_Search - İlk arama sonucu tıklanıyor...
+2025-08-19 15:14:41 [DEBUG] positive_Test.Content_Access_and_Video_Verification_Test_with_Moon_Search - Sayfa aşağı kaydırıldı, video bulundu.
+2025-08-19 15:14:41 [WARN] positive_Test.Content_Access_and_Video_Verification_Test_with_Moon_Search - Video başlamadı!
+2025-08-19 15:14:41 [INFO] positive_Test.Content_Access_and_Video_Verification_Test_with_Moon_Search - Video durduruldu.
+2025-08-19 15:14:41 [INFO] positive_Test.Content_Access_and_Video_Verification_Test_with_Moon_Search - Tarayıcı kapatıldı, test tamamlandı.
+2025-08-19 15:17:15 [INFO] positive_Test.Content_Access_and_Video_Verification_Test_with_Moon_Search - NASA ana sayfasına gidildi.
+2025-08-19 15:17:15 [INFO] positive_Test.Content_Access_and_Video_Verification_Test_with_Moon_Search - Arama kutusuna 'Moon' yazılıyor...
+2025-08-19 15:17:15 [DEBUG] positive_Test.Content_Access_and_Video_Verification_Test_with_Moon_Search - Arama başlığı doğrulandı: Search Results for: Moon
+2025-08-19 15:17:15 [INFO] positive_Test.Content_Access_and_Video_Verification_Test_with_Moon_Search - İlk arama sonucu doğrulandı: earth's moon
+https://science.nasa.gov/moon/
+learn more about the moon
+2025-08-19 15:17:15 [INFO] positive_Test.Content_Access_and_Video_Verification_Test_with_Moon_Search - İlk arama sonucu tıklanıyor...
+2025-08-19 15:17:19 [DEBUG] positive_Test.Content_Access_and_Video_Verification_Test_with_Moon_Search - Sayfa aşağı kaydırıldı, video bulundu.
+2025-08-19 15:17:19 [WARN] positive_Test.Content_Access_and_Video_Verification_Test_with_Moon_Search - Video başlamadı!
+2025-08-19 15:17:19 [INFO] positive_Test.Content_Access_and_Video_Verification_Test_with_Moon_Search - Video durduruldu.
+2025-08-19 15:17:19 [INFO] positive_Test.Content_Access_and_Video_Verification_Test_with_Moon_Search - Tarayıcı kapatıldı, test tamamlandı.

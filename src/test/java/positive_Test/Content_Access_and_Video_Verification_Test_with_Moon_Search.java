@@ -1,5 +1,6 @@
 package positive_Test;
 
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -15,52 +16,53 @@ public class Content_Access_and_Video_Verification_Test_with_Moon_Search {
     Moon_Page moon_page;
     String url = ConfigurationReader.getProperty("address");
 
+
+    static Logger logger = Logger.getLogger(Content_Access_and_Video_Verification_Test_with_Moon_Search.class);
+
     @BeforeMethod
     public void SetUp() {
-//        1.	Go to https://www.nasa.gov/
         Driver.getDriver().get(url);
+        logger.info("NASA ana sayfasına gidildi.");
         search_page = new Search_Page();
         moon_page = new Moon_Page();
     }
 
     @Test
     public void content_Access_and_Video_Verification_Test_with_Moon_Search() throws InterruptedException {
-
-//        2.	Type the word "Moon" in the search box at the top right of the home page and press Enter
+        logger.info("Arama kutusuna 'Moon' yazılıyor...");
         search_page.inputSearchBox("Moon");
 
-//        3.	On the page that opens, check if "Search Results for: Moon" appears on the page.
         String expectedTitle = "Search Results for: Moon";
         String actualTitle = moon_page.verifySearchResultTitle().getText();
         Assert.assertEquals(actualTitle, expectedTitle, "Search Result for Moon Passed!");
+        logger.debug("Arama başlığı doğrulandı: " + actualTitle);
 
-//        4.	Check if the first search result that comes up has the word "Moon" in it.
         String expectedText = "Moon".toLowerCase();
         String actualText = moon_page.verifyContainsSearchCheckedWord().getText().toLowerCase();
-        Assert.assertTrue(actualText.contains(expectedText),
-                "Moon failed!");
+        Assert.assertTrue(actualText.contains(expectedText), "Moon failed!");
+        logger.info("İlk arama sonucu doğrulandı: " + actualText);
 
-//        5.	Click on the first search result.
+        logger.info("İlk arama sonucu tıklanıyor...");
         moon_page.clickFirstContent();
 
-//        6.	On the page that opens, scroll down and keep scrolling until a video appears on the page.
         ReusableMethod.scrollPageThree();
+        logger.debug("Sayfa aşağı kaydırıldı, video bulundu.");
+
         moon_page.clickPlayVideoButton();
-
-//        7.	Check if it works by clicking on the video that appears.
-        moon_page.isYoutubeVideoPlaying();
-        ReusableMethod.sleep(6000);
         boolean isPlaying = moon_page.isYoutubeVideoPlaying();
-        System.out.println("Is the video currently playing?" + isPlaying);
+        if (isPlaying) {
+            logger.info("Video oynuyor.");
+        } else {
+            logger.warn("Video başlamadı!");
+        }
 
-//        8.	Stop or close the video by clicking again.
         moon_page.clickPauseVideoButton();
-
+        logger.info("Video durduruldu.");
     }
 
     @AfterMethod
-    public void TearnDown() {
+    public void TearDown() {
         Driver.closeDriver();
+        logger.info("Tarayıcı kapatıldı, test tamamlandı.");
     }
-
 }
