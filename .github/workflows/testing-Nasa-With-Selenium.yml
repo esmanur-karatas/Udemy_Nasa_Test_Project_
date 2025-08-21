@@ -42,7 +42,7 @@ jobs:
         run: mvn clean install -DskipTests
 
       - name: 🧪 Run Selenium Tests with TestNG
-        run: mvn test -DsuiteXmlFile=testng.xml
+        run: mvn test -DsuiteXmlFile=testng.xml -fae
 
       - name: 📤 Upload Test Reports (Extent Reports, TestNG HTML output)
         if: always()

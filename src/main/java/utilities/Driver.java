@@ -22,6 +22,11 @@ public class Driver {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
                     ChromeOptions options = new ChromeOptions();
+                    options.addArguments("--headless=new");
+                    options.addArguments("--no-sandbox");
+                    options.addArguments("--disable-dev-shm-usage");
+                    options.addArguments("--disable-gpu");
+                    options.addArguments("--remote-allow-origins=*");
                     options.addArguments("--disable-blink-features=AutomationControlled");
                     options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
                     options.setExperimentalOption("useAutomationExtension", false);
