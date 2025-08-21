@@ -27,6 +27,8 @@ public class Content_Access_and_Video_Verification_Test_with_Moon_Search {
         moon_page = new Moon_Page();
     }
 
+
+
     @Test
     public void content_Access_and_Video_Verification_Test_with_Moon_Search() throws InterruptedException {
         logger.info("Arama kutusuna 'Moon' yazılıyor...");

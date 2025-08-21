@@ -4,6 +4,7 @@ package positive_Test;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import pages.Series_Our_Alien_Earth_Page;
@@ -20,6 +21,7 @@ public class NASA_Video_Series_Access_and_Playback_Test {
     Series_Our_Alien_Earth_Page series_our_alien_earth_page;
     String url = ConfigurationReader.getProperty("address");
 
+    @Parameters("browser")
     @BeforeMethod
     public void Setup() {
         //        1.	Go to https://www.nasa.gov/

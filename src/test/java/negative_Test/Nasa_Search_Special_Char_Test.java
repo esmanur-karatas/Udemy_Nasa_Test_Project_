@@ -3,6 +3,7 @@ package negative_Test;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pages.Search_Page;
 import utilities.ConfigurationReader;
@@ -12,6 +13,7 @@ public class Nasa_Search_Special_Char_Test {
     Search_Page search_page;
     String url = ConfigurationReader.getProperty("address");
 
+    @Parameters("browser")
     @BeforeMethod
     public void Setup() {
         //        1.	Go to https://www.nasa.gov/

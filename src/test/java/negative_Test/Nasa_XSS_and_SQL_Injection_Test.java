@@ -3,6 +3,7 @@ package negative_Test;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pages.Search_Page;
 import utilities.ConfigurationReader;
@@ -13,6 +14,7 @@ public class Nasa_XSS_and_SQL_Injection_Test {
     Search_Page search_page;
     String url = ConfigurationReader.getProperty("address");
 
+    @Parameters("browser")
     @BeforeMethod
     public void SetUp() {
         Driver.getDriver().get(url);

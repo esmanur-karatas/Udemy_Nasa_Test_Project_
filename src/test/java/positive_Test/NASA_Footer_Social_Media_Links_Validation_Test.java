@@ -1,9 +1,7 @@
 package positive_Test;
 
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pages.Footer_Page;
 import utilities.ConfigurationReader;
 import utilities.Driver;
@@ -19,7 +17,7 @@ public class NASA_Footer_Social_Media_Links_Validation_Test {
 
     Footer_Page footer_page;
 
-    @BeforeMethod
+    @BeforeClass
     public void SetUp() {
 //        1.	Go to https://www.nasa.gov/
         Driver.getDriver().get(url);
@@ -83,7 +81,7 @@ public class NASA_Footer_Social_Media_Links_Validation_Test {
         ReusableMethod.closeCurrentTabAndSwitchBack();
     }
 
-    @AfterMethod
+    @AfterClass
     public void TearnDown() {
         Driver.closeDriver();
     }

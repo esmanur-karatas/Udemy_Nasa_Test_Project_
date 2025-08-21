@@ -3,6 +3,7 @@ package positive_Test;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pages.Images_Page;
 import pages.Tabbar_Multimedia_Page;
@@ -16,6 +17,7 @@ public class Multimedia_Images_Page_Test {
 
     String url = ConfigurationReader.getProperty("address");
 
+    @Parameters("browser")
     @BeforeMethod
     public void SetUp() {
         Driver.getDriver().get(url);

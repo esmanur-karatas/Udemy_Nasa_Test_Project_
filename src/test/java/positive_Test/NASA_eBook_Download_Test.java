@@ -3,6 +3,7 @@ package positive_Test;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pages.EBooks_Page;
 import pages.Tabbar_Multimedia_Page;
@@ -15,6 +16,7 @@ public class NASA_eBook_Download_Test {
     EBooks_Page eBooks_page;
     String url = ConfigurationReader.getProperty("address");
 
+    @Parameters("browser")
     @BeforeMethod
     public void SetUp() {
         Driver.getDriver().get(url);
